@@ -26,8 +26,8 @@ const roomImages = computed(() => {
   const result = rooms.reduce((acc, roomId) => {
     acc[`room${roomId.toUpperCase()}`] = nums.reduce((obj, num) => {
       obj[num] = {
-        desktop: importImage(`../assets/images/room-${roomId}-${num}.png`),
-        mobile: importImage(`../assets/images/room-${roomId}-sm-${num}.png`),
+        desktop: importImage(`room-${roomId}-${num}.png`),
+        mobile: importImage(`room-${roomId}-sm-${num}.png`),
       };
       return obj;
     }, {});
